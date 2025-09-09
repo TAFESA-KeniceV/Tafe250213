@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="Calculator.MortgagePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+		<StackPanel Margin="20" HorizontalAlignment="Center">
+			<TextBlock FontSize="50" Text="Mortgage Calculator"/>
+			<!--to add-->
+			<Button x:Name="Exit" FontSize="30" Content="Exit" Margin="10" Width="300" HorizontalAlignment="Center" Click="Exit_Click"/>
+		</StackPanel>
+	</Grid>
+</Page>
