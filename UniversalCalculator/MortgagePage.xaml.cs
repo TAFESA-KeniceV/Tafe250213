@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -31,6 +32,67 @@ namespace Calculator
 		{
 			this.Frame.Navigate(typeof(MainMenu));
 
+		}
+
+		private async void calcButton_Click(object sender, RoutedEventArgs e)
+		{
+			/*
+			double principal = 0.0;
+			double interest = 0.0;
+			double noMonths = 0.0;
+
+		//principal parse
+			try
+			{
+				double.Parse(principalTextBox.Text);
+			}
+			catch
+			{
+				var dialogMessage = new MessageDialog("Please enter decimal number into principal text box.");
+				await dialogMessage.ShowAsync();
+				return;
+			}
+
+			//interest parse
+			try
+			{
+				double.Parse(monInTextBox.Text);
+			}
+			catch
+			{
+				var dialogMessage = new MessageDialog("Please enter decimal number into interest text box.");
+				await dialogMessage.ShowAsync();
+				return;
+			}
+
+			//months parse
+			try
+			{
+				double.Parse(monthsTextBox.Text);
+			}
+			catch
+			{
+				var dialogMessage = new MessageDialog("Please enter number into months text box.");
+				await dialogMessage.ShowAsync();
+				return;
+			}
+			*/
+			double yearlyIntrestRate = double.Parse(anInTextBox.Text);
+			double principleBorrow = double.Parse(principalTextBox.Text);
+			int Years = int.Parse(yearsTextBox.Text);
+			int andMonths = int.Parse(monthsTextBox.Text);
+
+			double monthlyIntrestRate = yearlyIntrestRate / 12.0;
+			monthlyIntrestRate = monthlyIntrestRate * 0.01;
+
+			int numberOfPayments = Years * 12 + andMonths;
+
+			double numerator = principleBorrow * Math.Pow(1 + monthlyIntrestRate, numberOfPayments) * monthlyIntrestRate;
+			double denominator = Math.Pow(1 + monthlyIntrestRate, numberOfPayments) - 1;
+			double monthlyRepayment = numerator / denominator;
+
+			monInTextBox.Text = monthlyIntrestRate.ToString();
+			monthlyRepayTextBox.Text = numberOfPayments.ToString();
 		}
 	}
 }
