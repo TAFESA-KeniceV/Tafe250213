@@ -12,7 +12,7 @@
 		<StackPanel Margin="20" HorizontalAlignment="Center">
 			<TextBlock FontSize="50" Text="Currency Conversion Calculator" HorizontalAlignment="Center"/>
 			<!--Entries-->
-			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,50,0,0">
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,35,0,0">
 				<!--Amount-->
 				<StackPanel Margin="25" HorizontalAlignment="Left">
 					<TextBlock x:Name="amtTextBlock" TextWrapping="Wrap" Text="Amount $" FontSize="25" Margin="15"/>
@@ -39,10 +39,10 @@
 					</ComboBox>
 				</StackPanel>
 			</StackPanel>
-			<StackPanel Margin="25">
-				<TextBlock x:Name="entryTextBlock" TextWrapping="Wrap" Text="" FontSize="25" Margin="5" Height="75"/>
-				<TextBlock x:Name="resTextBlock" TextWrapping="Wrap" Text="" FontSize="25" FontWeight="Bold" Margin="5" Height="75"/>
-				<TextBlock x:Name="convTextBlock" TextWrapping="Wrap" Text="" FontSize="25" Margin="5" Height="75"/>
+			<StackPanel Margin="15">
+				<TextBlock x:Name="entryTextBlock" TextWrapping="Wrap" Text="" FontSize="25" Margin="5" Height="50"/>
+				<TextBlock x:Name="resTextBlock" TextWrapping="Wrap" Text="" FontSize="25" FontWeight="Bold" Margin="5" Height="50"/>
+				<TextBlock x:Name="convTextBlock" TextWrapping="Wrap" Text="" FontSize="25" Margin="5" Height="100"/>
 			</StackPanel>
 			<StackPanel>
 				<Button x:Name="calcCurButton" Content="Calculate Currency" FontSize="30" Margin="10" Width="300" HorizontalAlignment="Center" Click="calcCurButton_Click"/>
