@@ -8,6 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+	<!--totally changing the navagation-->
     <Grid>
 		<StackPanel Margin="20" HorizontalAlignment="Center">
 			<TextBlock FontSize="50" Text="Universal Calculator"/>
