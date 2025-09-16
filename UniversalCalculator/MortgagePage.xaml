@@ -11,8 +11,36 @@
     <Grid>
 		<StackPanel Margin="20" HorizontalAlignment="Center">
 			<TextBlock FontSize="50" Text="Mortgage Calculator"/>
-			<!--to add-->
-			<Button x:Name="Exit" FontSize="30" Content="Exit" Margin="10" Width="300" HorizontalAlignment="Center" Click="Exit_Click"/>
+			
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="Principal Borrowed: $" FontSize="30" Margin="10"/>
+					<TextBox x:Name="principalTextBox" Width="300" Margin="10"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="Years:" FontSize="30" Margin="10"/>
+					<TextBox x:Name="yearsTextBox" Width="300" Margin="10"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="Months:" FontSize="30" Margin="10"/>
+					<TextBox x:Name="monthsTextBox" Width="300" Margin="10"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="Annual Interest Rate: %" FontSize="30" Margin="10"/>
+					<TextBox x:Name="anInTextBox" Width="300" Margin="10"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="Monthly Interest Rate: %" FontSize="30" Margin="10"/>
+					<TextBox x:Name="monInTextBox" Width="300" Margin="10" IsReadOnly="True"/>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="Monthly Repayment:" FontSize="30" Margin="10"/>
+					<TextBox x:Name="monthlyRepayTextBox" Width="300" Margin="10" IsReadOnly="True"/>
+				</StackPanel>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				<Button x:Name="calcButton" Content="Calculate" FontSize="30" Width="300" Click="calcButton_Click"/>
+				<Button x:Name="Exit" FontSize="30" Content="Exit" Margin="10" Width="300" Click="Exit_Click"/>
+			</StackPanel>
 		</StackPanel>
+			
 	</Grid>
 </Page>
